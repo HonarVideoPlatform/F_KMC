@@ -2,13 +2,13 @@
 
 dir
 8923
-svn+ssh://svnread@kelev.kaltura.com/usr/local/kalprod/flash/kmc/v4.2.1/xml/analytics
+svn+ssh://svnread@kelev.kaltura.com/usr/local/kalprod/flash/kmc/v4.2.2/xml/analytics
 svn+ssh://svnread@kelev.kaltura.com/usr/local/kalprod
 
 
 
-2011-06-20T06:54:39.527908Z
-5672
+2011-06-20T12:37:26.470711Z
+5680
 atars
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2017-07-03T23:32:18.000000Z
+2017-07-03T23:33:31.000000Z
 6c1c70259ab89599f5415407b7991d90
-2011-06-20T06:54:39.527908Z
-5672
+2011-06-20T12:37:26.470711Z
+5680
 atars
 
 

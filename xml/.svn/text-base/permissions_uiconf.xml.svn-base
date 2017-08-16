@@ -16,7 +16,7 @@
 			</permission>
 			<!-- Remote Storage -->
 			<permission text="Add from remote storage" id="CONTENT_INGEST_REMOTE_STORAGE"
-						dependsOnFeature="FEATURE_REMOTE_STORAGE">
+						dependsOnFeature="FEATURE_REMOTE_STORAGE_INGEST">
 				<ui id="entryDrilldown.entryAssets" allowLink="false"/>
 				<ui id="content.generalPermissions" enableRemoteStorage="false"/>
 			</permission>
@@ -92,7 +92,7 @@
 			</permission>
 			<permission text="Modify Custom Data" id="CONTENT_MANAGE_CUSTOM_DATA"
 						dependsOnFeature="METADATA_PLUGIN_PERMISSION">
-				<ui id="entryDrilldown.customData.all" enabled="false"/>
+				<ui id="entryCustomData" metadataEditable="false"/>
 				<ui id="entryDrilldown.saveBtn" enabled="false" buttonMode="false"/>
 			</permission>
 			<permission text="Delete Content" id="CONTENT_MANAGE_DELETE">
@@ -137,8 +137,19 @@
 			<permission text="Download Files" id="CONTENT_MANAGE_DOWNLOAD">
 				<ui id="content.manage.toolBar.download" visible="false" includeInLayout="false"/>
 			</permission>
-
 		</permissionGroup>
+		
+		<!-- Import Log Control -->
+		<permissionGroup text="Import Log Control" id="BULK_LOG_BASE" >
+			<ui id="uploads.toolbar" visible="false" includeInLayout="false"/>
+			<permission text="Download Log Files" id="BULK_LOG_DOWNLOAD">
+				<ui id="uploads.bulk" allowActions="false"/>
+			</permission>
+			<!--permission text="Download Log Items" id="BULK_LOG_DELETE">
+				<ui id="uploads.bulk" allowActions="false"/>
+			</permission-->
+		</permissionGroup>
+		
 		<!-- Content Moderation -->
 		<permissionGroup text="Content Moderation" id="CONTENT_MODERATE_BASE" isAdvancedGroup="true">
 			<permission text="Approve/Reject Content" id="CONTENT_MODERATE_APPROVE_REJECT">
@@ -156,7 +167,7 @@
 			</permission>
 			<permission text="Moderate Custom Metadata" id="CONTENT_MODERATE_CUSTOM_DATA"
 						dependsOnFeature="METADATA_PLUGIN_PERMISSION">
-				<ui id="entryDrilldown.customData.all" enabled="false"/>
+				<ui id="entryCustomData" metadataEditable="false"/>
 				<ui id="entryDrilldown.saveBtn" enabled="false" buttonMode="false"/>
 			</permission>
 		</permissionGroup>
@@ -469,7 +480,7 @@
 				<permission id="SYNDICATION_UPDATE"/>
 				<permission id="SYNDICATION_DELETE"/>
 			</tab>
-			<tab id="upload">
+			<tab id="uploads">
 				<permission id="CONTENT_INGEST_BASE"/>
 				<permission id="CONTENT_INGEST_UPLOAD"/>
 				<permission id="CONTENT_INGEST_BULK_UPLOAD"/>
@@ -486,6 +497,15 @@
 		</module>
 		<module id="analytics">
 			<permission id="ANALYTICS_BASE"/>
+		</module>
+		<module id="add">
+			<permission id="CONTENT_INGEST_UPLOAD"/>
+			<permission id="CONTENT_INGEST_BULK_UPLOAD"/>
+			<permission id="CONTENT_INGEST_EXTERNAL_SEARCH"/>
+			<permission id="CONTENT_INGEST_WEBCAM"/>
+			<permission id="CONTENT_INGEST_ORPHAN_VIDEO"/>
+			<permission id="CONTENT_INGEST_ORPHAN_AUDIO"/>
+			<permission id="LIVE_STREAM_ADD"/>
 		</module>
 
 		<!-- this module is not removed even if all specified tabs are removed

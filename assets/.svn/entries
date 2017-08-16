@@ -2,13 +2,13 @@
 
 dir
 8923
-svn+ssh://svnread@kelev.kaltura.com/usr/local/kalprod/flash/kmc/v4.2.1/assets
+svn+ssh://svnread@kelev.kaltura.com/usr/local/kalprod/flash/kmc/v4.2.2/assets
 svn+ssh://svnread@kelev.kaltura.com/usr/local/kalprod
 
 
 
-2011-06-20T06:54:39.527908Z
-5672
+2011-06-27T16:30:46.364557Z
+5720
 atars
 
 
@@ -35,10 +35,10 @@ file
 
 
 
-2017-07-03T23:32:19.000000Z
-7b7c62385a7f94e1bf826f6ff7a0075a
-2011-06-20T06:54:39.527908Z
-5672
+2017-07-03T23:33:31.000000Z
+86b44a88776152103163438f3c467cc7
+2011-06-27T16:30:46.364557Z
+5720
 atars
 has-props
 
@@ -61,5 +61,5 @@ has-props
 
 
 
-138095
+138103
 
